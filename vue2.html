@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo-1</title>
+</head>
+<body>
+	<div id="app">
+	<input type="button" value="添加" v-on:dbclick="add()"/>
+	 <ul>
+	 	<li v-for="value in arr">
+	 		{{$index}} {{value}} 
+	 	</li>
+	 </ul>
+	 <br>
+	 <ul>
+	 	<li v-for="(k,v) in json">
+	 		{{k}}:{{v}} {{$index}}
+	 	</li>
+	 </ul>
+	</div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+	var V=new Vue({
+		el:"#app",
+		data:{
+			arr:["tom","susan","jarry"],
+            json:{name:"tom",age:20,sex:'男'}
+		},
+		methods:{
+			add:function(){
+				this.arr.push('apple');
+			}
+		}
+	});
+</script>
+</html>

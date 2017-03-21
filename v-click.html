@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo-1</title>
+</head>
+<body>
+	<div id="app">
+	  {{mes}}
+	  <input type="button" value="点击我试试看" v-on:click="show()">
+	</div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+	var V=new Vue({
+		el:"#app",
+		data:{
+			mes:"welcome vue!"
+		},
+		methods:{
+			show:function(){
+				alert("测试点击事件！");
+			}
+		}
+	});
+</script>
+</html>
